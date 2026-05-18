@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- This tells the browser what the page is called -->
     <title>OEFSTAAS</title>
-    
-    <!-- This makes the page look correct on mobile screens too -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- This is the styling — centering the text on the page -->
     <style>
         body {
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             background-color: white;
             font-family: Arial, sans-serif;
             font-size: 24px;
         }
+
+        .logo {
+            margin-top: 40px;
+            width: 150px;
+        }
+
+        .center {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
-    <!-- This is the only thing visible on the page -->
-    <p>In the works!</p>
+    <img class="logo" src="oefstaas_logo_potential.png" alt="OEFSTAAS">
+    <div class="center">
+        <p>In the works!</p>
+    </div>
 </body>
 </html>
