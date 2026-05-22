@@ -24,19 +24,23 @@
             overflow-x: hidden;
         }
 
+        /* ── GRASS WRAPPER — one tall background ── */
+        .grass-wrapper {
+            width: 100%;
+            background-image: url('grass.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
         /* ── SECTION 1 — HERO ── */
         .hero {
             position: relative;
             width: 100vw;
             height: 100vh;
-            background-image: url('grass.jpg');
-            background-size: 100% auto;
-            background-position: center center;
-            background-repeat: no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
         }
 
         .logo {
@@ -48,8 +52,8 @@
         }
 
         .flawer-img {
-            width: 85%;
-            max-width: 1100px;
+            width: 100%;
+            max-width: 1400px;
             position: relative;
             z-index: 5;
         }
@@ -58,10 +62,6 @@
         .flawer-section {
             width: 100vw;
             height: 100vh;
-            background-image: url('grass.jpg');
-            background-size: 100% auto;
-            background-position: center bottom;
-            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -103,6 +103,34 @@
             50% { opacity: 0; }
         }
 
+        /* ── FOOTER ── */
+        .footer {
+            width: 100%;
+            background-color: #0a0a0a;
+            padding: 40px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            width: 160px;
+            opacity: 0.8;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .footer-right p {
+            font-family: "arboria", sans-serif;
+            font-weight: 300;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.05em;
+            line-height: 1.8;
+        }
+
         /* ── MOBILE ── */
         @media (max-width: 768px) {
             .logo {
@@ -112,7 +140,7 @@
             }
 
             .flawer-img {
-                width: 95%;
+                width: 100%;
             }
 
             .flawer-title {
@@ -122,22 +150,48 @@
             .flawer-subtitle {
                 font-size: clamp(14px, 4vw, 20px);
             }
+
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .footer-right {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- SECTION 1 — HERO -->
-    <section class="hero">
-        <img class="logo" src="OEFSTAAS_LOGO_WHITE.png" alt="OEFSTAAS">
-        <img class="flawer-img" src="flawerhero_final.png" alt="FLAWER">
-    </section>
+    <!-- GRASS WRAPPER — contains both sections on one tall background -->
+    <div class="grass-wrapper">
 
-    <!-- SECTION 2 — FLAWER TEXT -->
-    <section class="flawer-section">
-        <h1 class="flawer-title">FLAWER</h1>
-        <p class="flawer-subtitle">coming soon<span class="cursor"></span></p>
-    </section>
+        <!-- SECTION 1 — HERO -->
+        <section class="hero">
+            <img class="logo" src="OEFSTAAS_LOGO_WHITE.png" alt="OEFSTAAS">
+            <img class="flawer-img" src="flawerhero_final.png" alt="FLAWER">
+        </section>
+
+        <!-- SECTION 2 — FLAWER TEXT -->
+        <section class="flawer-section">
+            <h1 class="flawer-title">FLAWER</h1>
+            <p class="flawer-subtitle">coming soon<span class="cursor"></span></p>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <img class="footer-logo" src="OEFSTAAS_LOGO_WHITE.png" alt="OEFSTAAS">
+        <div class="footer-right">
+            <p>© 2026 Håken Øfstaas. All rights reserved.</p>
+            <p>OEFSTAAS™ — Trondheim, Norway</p>
+            <p>oefstaas.com</p>
+        </div>
+    </footer>
 
 </body>
 </html>
