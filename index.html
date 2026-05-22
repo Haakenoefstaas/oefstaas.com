@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="google-site-verification" content="yClNcrgA8yhJERCYt2-HZmyXBl8LaDMRbQ2EXZTgzko" />
     <meta name="description" content="The world's first flower-shaped guitar pedals. OEFSTAAS — coming soon.">
     <meta name="title" content="OEFSTAAS">
@@ -19,9 +19,14 @@
             scroll-behavior: smooth;
         }
 
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
         body {
             font-family: "arboria", sans-serif;
-            overflow-x: hidden;
         }
 
         /* ── GRASS WRAPPER ── */
@@ -38,7 +43,7 @@
             position: relative;
             width: 100vw;
             height: 100vh;
-            height: var(--app-height);
+            min-height: -webkit-fill-available;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -63,7 +68,7 @@
         .flawer-section {
             width: 100vw;
             height: 100vh;
-            height: var(--app-height);
+            min-height: -webkit-fill-available;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -88,21 +93,6 @@
             color: rgba(255, 255, 255, 0.95);
             letter-spacing: 0.08em;
             text-align: center;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 2px;
-            height: 0.85em;
-            background-color: rgba(255, 255, 255, 0.95);
-            margin-left: 3px;
-            vertical-align: middle;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
         }
 
         /* ── FOOTER ── */
@@ -133,12 +123,12 @@
             line-height: 1.8;
         }
 
-        /* ── MOBILE ── */
+        /* ── MOBILE PORTRAIT ── */
         @media (max-width: 768px) {
 
             .grass-wrapper {
-                background-position: center 30%;
-                background-size: auto 100%;
+                background-position: center 50%;
+                background-size: cover;
             }
 
             .logo {
@@ -150,7 +140,6 @@
             .flawer-img {
                 width: 160%;
                 max-width: 160%;
-                transform: translate(-0%);
             }
 
             .flawer-title {
@@ -172,6 +161,34 @@
                 text-align: center;
             }
         }
+
+        /* ── MOBILE LANDSCAPE ── */
+        @media (max-width: 900px) and (orientation: landscape) {
+            .hero {
+                height: auto;
+                padding: 80px 0 40px 0;
+            }
+
+            .flawer-section {
+                height: auto;
+                padding: 60px 0;
+            }
+
+            .flawer-img {
+                width: 60%;
+                max-width: 60%;
+            }
+
+            .logo {
+                width: 100px;
+                top: 15px;
+                left: 15px;
+            }
+
+            .flawer-title {
+                font-size: clamp(50px, 12vw, 100px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -188,7 +205,7 @@
         <!-- SECTION 2 — FLAWER TEXT -->
         <section class="flawer-section">
             <h1 class="flawer-title">FLAWER</h1>
-            <p class="flawer-subtitle">coming soon...<span class="cursor"></span></p>
+            <p class="flawer-subtitle">coming soon...</p>
         </section>
 
     </div>
@@ -202,15 +219,6 @@
             <p>oefstaas.com</p>
         </div>
     </footer>
-
-    <script>
-    const appHeight = () => {
-        const doc = document.documentElement;
-        doc.style.setProperty('--app-height', `${window.innerHeight}px`);
-    }
-    window.addEventListener('resize', appHeight);
-    appHeight();
-    </script>
 
 </body>
 </html>
