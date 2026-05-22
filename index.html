@@ -63,7 +63,6 @@
             position: relative;
             z-index: 5;
             display: block;
-            mix-blend-mode: multiply;
         }
 
         /* ── SECTION 2 — FLAWER TEXT ── */
@@ -201,8 +200,8 @@
         <!-- SECTION 1 — HERO -->
         <section class="hero">
             <img class="logo" src="OEFSTAAS_LOGO_WHITE.png" alt="OEFSTAAS">
-            <video class="flawer-img" autoplay loop muted playsinline>
-                <source src="flawer.webm" type="video/webm">
+            <video class="flawer-img" autoplay loop muted playsinline style="background: transparent;">
+                <source src="flawer.webm" type="video/webm; codecs=vp9">
             </video>
         </section>
 
