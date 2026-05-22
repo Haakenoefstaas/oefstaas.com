@@ -22,11 +22,6 @@
         body {
             font-family: "arboria", sans-serif;
             overflow-x: hidden;
-            background-image: url('grass.jpg');
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
-            min-height: 200vh;
         }
 
         /* ── SECTION 1 — HERO ── */
@@ -34,23 +29,27 @@
             position: relative;
             width: 100vw;
             height: 100vh;
+            background-image: url('grass.jpg');
+            background-size: 100% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: visible;
+            overflow: hidden;
         }
 
         .logo {
             position: absolute;
             top: 30px;
             left: 30px;
-            width: 260px;
+            width: 280px;
             z-index: 10;
         }
 
         .flawer-img {
-            width: 160%;
-            max-width: 1600px;
+            width: 85%;
+            max-width: 1100px;
             position: relative;
             z-index: 5;
         }
@@ -59,11 +58,15 @@
         .flawer-section {
             width: 100vw;
             height: 100vh;
+            background-image: url('grass.jpg');
+            background-size: 100% auto;
+            background-position: center bottom;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 16px;
+            gap: 20px;
         }
 
         .flawer-title {
@@ -78,9 +81,9 @@
 
         .flawer-subtitle {
             font-family: "arboria", sans-serif;
-            font-weight: 300;
-            font-size: clamp(14px, 2vw, 22px);
-            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            font-size: clamp(16px, 2.5vw, 28px);
+            color: rgba(255, 255, 255, 0.95);
             letter-spacing: 0.08em;
             text-align: center;
         }
@@ -89,7 +92,7 @@
             display: inline-block;
             width: 2px;
             height: 0.85em;
-            background-color: rgba(255, 255, 255, 0.85);
+            background-color: rgba(255, 255, 255, 0.95);
             margin-left: 3px;
             vertical-align: middle;
             animation: blink 1s infinite;
@@ -103,17 +106,21 @@
         /* ── MOBILE ── */
         @media (max-width: 768px) {
             .logo {
-                width: 140px;
+                width: 150px;
                 top: 20px;
                 left: 20px;
             }
 
             .flawer-img {
-                width: 140%;
+                width: 95%;
             }
 
             .flawer-title {
                 font-size: clamp(60px, 20vw, 120px);
+            }
+
+            .flawer-subtitle {
+                font-size: clamp(14px, 4vw, 20px);
             }
         }
     </style>
