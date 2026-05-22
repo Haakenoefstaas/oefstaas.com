@@ -38,7 +38,7 @@
             position: relative;
             width: 100vw;
             height: 100vh;
-            height: 100dvh;
+            height: var(--app-height);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -63,7 +63,7 @@
         .flawer-section {
             width: 100vw;
             height: 100vh;
-            height: 100dvh;
+            height: var(--app-height);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -202,6 +202,15 @@
             <p>oefstaas.com</p>
         </div>
     </footer>
+
+    <script>
+    const appHeight = () => {
+        const doc = document.documentElement;
+        doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+    }
+    window.addEventListener('resize', appHeight);
+    appHeight();
+    </script>
 
 </body>
 </html>
