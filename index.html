@@ -24,12 +24,12 @@
             overflow-x: hidden;
         }
 
-        /* ── GRASS WRAPPER — one tall background ── */
+        /* ── GRASS WRAPPER ── */
         .grass-wrapper {
             width: 100%;
             background-image: url('grass.jpg');
             background-size: cover;
-            background-position: center top;
+            background-position: center 30%;
             background-repeat: no-repeat;
         }
 
@@ -47,7 +47,7 @@
             position: absolute;
             top: 30px;
             left: 30px;
-            width: 320px;
+            width: 280px;
             z-index: 10;
         }
 
@@ -133,14 +133,21 @@
 
         /* ── MOBILE ── */
         @media (max-width: 768px) {
+
+            .grass-wrapper {
+                background-position: center 30%;
+                background-size: auto 100%;
+            }
+
             .logo {
-                width: 150px;
+                width: 130px;
                 top: 20px;
                 left: 20px;
             }
 
             .flawer-img {
-                width: 100%;
+                width: 98%;
+                max-width: 98%;
             }
 
             .flawer-title {
@@ -166,7 +173,7 @@
 </head>
 <body>
 
-    <!-- GRASS WRAPPER — contains both sections on one tall background -->
+    <!-- GRASS WRAPPER -->
     <div class="grass-wrapper">
 
         <!-- SECTION 1 — HERO -->
@@ -188,7 +195,7 @@
         <img class="footer-logo" src="OEFSTAAS_LOGO_WHITE.png" alt="OEFSTAAS">
         <div class="footer-right">
             <p>© 2026 Håken Øfstaas. All rights reserved.</p>
-            <p>OEFSTAAS™ — Trondheim, Norway</p>
+            <p>OEFSTAAS™ — Norway</p>
             <p>oefstaas.com</p>
         </div>
     </footer>
