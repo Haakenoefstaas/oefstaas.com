@@ -22,6 +22,10 @@
         body {
             font-family: "arboria", sans-serif;
             overflow-x: hidden;
+            background-image: url('grass.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         /* ── SECTION 1 — HERO ── */
@@ -29,9 +33,6 @@
             position: relative;
             width: 100vw;
             height: 100vh;
-            background-image: url('grass.jpg');
-            background-size: cover;
-            background-position: center top;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -42,15 +43,16 @@
             position: absolute;
             top: 30px;
             left: 30px;
-            width: 220px;
+            width: 260px;
             z-index: 10;
         }
 
         .flawer-img {
-            width: 80%;
-            max-width: 900px;
+            width: 130%;
+            max-width: 1400px;
             position: relative;
             z-index: 5;
+            margin-top: -5%;
         }
 
         .scroll-indicator {
@@ -61,7 +63,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
             z-index: 10;
             animation: bounce 2s infinite;
         }
@@ -81,7 +82,7 @@
             border-right: 1px solid rgba(255, 255, 255, 0.6);
             border-bottom: 1px solid rgba(255, 255, 255, 0.6);
             transform: rotate(45deg);
-            margin-top: -8px;
+            margin-top: -4px;
         }
 
         @keyframes bounce {
@@ -93,9 +94,6 @@
         .flawer-section {
             width: 100vw;
             height: 100vh;
-            background-image: url('grass.jpg');
-            background-size: cover;
-            background-position: center bottom;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -140,13 +138,17 @@
         /* ── MOBILE ── */
         @media (max-width: 768px) {
             .logo {
-                width: 130px;
+                width: 140px;
                 top: 20px;
                 left: 20px;
             }
 
             .flawer-img {
-                width: 95%;
+                width: 120%;
+            }
+
+            .flawer-title {
+                font-size: clamp(60px, 20vw, 120px);
             }
         }
     </style>
@@ -155,7 +157,7 @@
 
     <!-- SECTION 1 — HERO -->
     <section class="hero">
-        <img class="logo" src="oefstaas_logo_potential.png" alt="OEFSTAAS">
+        <img class="logo" src="OEFSTAAS_LOGO_WHITE.png" alt="OEFSTAAS">
         <img class="flawer-img" src="flawerhero_final.png" alt="FLAWER">
         <div class="scroll-indicator">
             <span></span>
