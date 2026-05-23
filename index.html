@@ -74,7 +74,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            padding-bottom:400px;
+            padding-bottom: 400px;
         }
 
         .flawer-title {
@@ -141,6 +141,7 @@
             .flawer-img {
                 width: 160%;
                 max-width: 160%;
+                mix-blend-mode: screen;
             }
 
             .flawer-title {
@@ -161,6 +162,11 @@
             .footer-right {
                 text-align: center;
             }
+
+            .flawer-section {
+                padding-bottom: 120px;
+                height: 80vh;
+            }
         }
 
         /* ── MOBILE LANDSCAPE ── */
@@ -178,6 +184,7 @@
             .flawer-img {
                 width: 60%;
                 max-width: 60%;
+                mix-blend-mode: screen;
             }
 
             .logo {
@@ -191,25 +198,6 @@
             }
         }
 
-
-        /* ── MOBILE IMAGE / DESKTOP VIDEO ── */
-        .mobile-only {
-            display: none;
-        }
-
-        @media (max-width: 768px) (orientation: landscape) and (max-height: 500 px) {
-            .desktop-only {
-                display: none;
-            }
-            .mobile-only {
-                display: block;
-            }
-            .flawer-section {
-                padding-bottom: 120px;
-                height: 80vh;
-            }
-        }
-        
     </style>
 </head>
 <body>
@@ -220,13 +208,11 @@
         <!-- SECTION 1 — HERO -->
         <section class="hero">
             <img class="logo" src="OEFSTAAS_LOGO_WHITE.png" alt="OEFSTAAS">
-        <!-- Desktop video -->
-        <video class="flawer-img desktop-only" autoplay loop muted playsinline>
-            <source src="flawer.webm" type="video/webm">
-        </video>
 
-        <!-- Mobile image -->
-        <img class="flawer-img mobile-only" src="flawerhero_final.png" alt="FLAWER">
+            <!-- Video for all devices — screen blend mode handles mobile black background -->
+            <video class="flawer-img" autoplay loop muted playsinline>
+                <source src="flawer.webm" type="video/webm">
+            </video>
         </section>
 
         <!-- SECTION 2 — FLAWER TEXT -->
